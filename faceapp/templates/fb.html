@@ -36,7 +36,7 @@
     <div class="container-fluid" id="logo">
         <div class="row ">
             <div class="col-lg-6 col-md-12 col-sm-12">
-                <img src="{% static 'image/fblogo.png' %}" class="img-responsive" style="height: 60px;">
+                <img src="{% static 'image/fb.png' %}" class="img-responsive" style="height: 90px;">
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 ">
                 <form action="" class="form-row">
@@ -46,12 +46,12 @@
                         <label for="email">Email</label>
                         <input type="text" class="form-control" placeholder="Email/phone"><input type="checkbox">keep me
                         logged in!
-                    </div>&nbsp;&nbsp;
+                    </div>
 
                     <div class="form-group col-lg-4 col-md-12 col-sm-12 " id="head">
                         <label for="password">Password</label>
                         <input type="text" class="form-control" placeholder="Enter your password">Forgot password?
-                    </div> &nbsp;
+                    </div>
 
                     <div class="form-group col-lg-2 col-md-12 col-sm-12">
                         <button type="submit" class="btn btn-info btn-bordered"
@@ -63,7 +63,7 @@
     </div>
     <div class="container-fluid" style="background-color:rgb(250, 250, 250); height: auto;"><br>
         <div class="row ">
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-12 col-sm-12 d-none d-lg-block">
                 <h3 style="padding-left: 50px;">facebook helps you connect and share with the people in your life</h3>
                 <br><br>
                 <img src="{% static 'image/connecting.jpg' %}" class="img-fluid"
@@ -72,7 +72,7 @@
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <h1 style="text-align: center;">Create an account<br><small>it's free and always will be</small></h1>
-                <br>
+                
 
                 <form action="" class="form-inline">
 
@@ -115,11 +115,12 @@
                             </select>
                             <select>
                                 <option>year</option>
-                            </select><span><small>why do I need to provide my date of birth</small></span>
+                            </select><span><small>why do I need to provide my date of birth?</small></span>
                         </p>
                         <input type="radio" name="gender">male &nbsp;
-                        <input type="radio" name="gender">female<br><br>
+                        <input type="radio" name="gender">female<br>
                     </div>
+                   <small style="padding-left: 12px;">By clicking create an account, you agree to our Terms and confirm that you have read our Data Policy, including our cookie Use Policy. You may recieve SMS message notifications from Facebook and can opt out at any time.</small> 
                     <div class="form-group col-lg-12 col-md-12 col-sm-12">
                         <input type="button" class="btn btn-success btn-block col-lg-4" value=" Create an account">
                     </div>
