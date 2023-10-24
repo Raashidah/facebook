@@ -3,92 +3,93 @@
 {% block content %}
 <div class="row">
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <form action="" class="form-inline" method="POST" >   
-      
-                {% csrf_token %}
+        <form action="" class="form-inline" method="POST">
+
+            {% csrf_token %}
             <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                <input type="text" name="fname" id="first" class="form-control" placeholder="first name" value="{{user1.Firstname}}"
-                    style="display: block;width:100% ;" readonly >
+                <input type="text" name="fname" id="first" class="form-control" placeholder="first name"
+                    value="{{user1.Firstname}}" style="display: block;width:100% ;" readonly>
                 <br>
             </div>
-            
+
             <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                
-                <input type="text" name="lname" id="second" class="form-control" placeholder="last name" value="{{user1.Lastname}}"
-                    style="display: block;width:100% ;" readonly>
+
+                <input type="text" name="lname" id="second" class="form-control" placeholder="last name"
+                    value="{{user1.Lastname}}" style="display: block;width:100% ;" readonly>
                 <br><br>
             </div>
             <div class="form-group col-lg-12 col-md-12 col-sm-12">
-            
+
                 <input type="text" name="mob" id="mobile" class="form-control" placeholder="mobile number"
                     style="display: block;width:100% ;" value="{{user1.Mobile_Number}}" readonly><br>
             </div>
             <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                
-                <input type="text" name="email" id="email" class="form-control" placeholder="email" value="{{uslog.Email}}"
-                    style="display: block;width:100% ;" readonly><br>
+
+                <input type="text" name="email" id="email" class="form-control" placeholder="email"
+                    value="{{uslog.Email}}" style="display: block;width:100% ;" readonly><br>
                 <br>
-                
+
             </div>
             &nbsp; Birthday
             <div class="form-group col-lg-12 col-md-12 col-sm-12">
-            
+
                 <input type="text" class="form-control" name="" id="dob" value="{{user1.DOB}}" readonly>
-            
-            
-            </div>     
-                <br>
-             <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                <input type="radio" name="gender" value="male">male  &nbsp;
+
+
+            </div>
+            <br>
+            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                <input type="radio" name="gender" value="male">male &nbsp;
                 <input type="radio" name="gender" value="female">female
-            <br></div>
+                <br>
+            </div>
 
             <div class="form-group col-lg-12 col-md-12 col-sm-12">
 
-                <input class="btn btn-success " id="show" value="Edit" type="button" onclick="return funA(this)" >&nbsp;&nbsp;
+                <input class="btn btn-success " id="show" value="Edit" type="button"
+                    onclick="return funA(this)">&nbsp;&nbsp;
                 <input class="btn btn-danger " id="cancel" value="cancel" type="button" onclick=" funB()">
             </div>
-        
-        </form>   
+
+        </form>
     </div>
 </div>
 
 
 
 <script>
-        function funA(button) {  
-            if(button.value=='Edit'){
-                document.getElementById("mobile").readOnly=false
-                document.getElementById("first").readOnly=false
-                document.getElementById("second").readOnly=false
-                document.getElementById("dob").readOnly=false
-                document.getElementById("email").readOnly=false
-                
-                button.value='Update'
-                button.type='submit'
-                console.log(button.type)
+    function funA(button) {
+        if (button.value == 'Edit') {
+            document.getElementById("mobile").readOnly = false
+            document.getElementById("first").readOnly = false
+            document.getElementById("second").readOnly = false
+            document.getElementById("dob").readOnly = false
+            document.getElementById("email").readOnly = false
+
+            button.value = 'Update'
+            button.type = 'submit'
+            console.log(button.type)
         }
     }
 
 
-    function funB() {  
-        if(document.getElementById("show").value=='Update'){
-            document.getElementById("show").value='Edit'
-            document.getElementById("show").type='button'
-                document.getElementById("mobile").readOnly=true
-                document.getElementById("first").readOnly=true
-                document.getElementById("second").readOnly=true
-                document.getElementById("dob").readOnly=true
-                document.getElementById("email").readOnly=true
+    function funB() {
+        if (document.getElementById("show").value == 'Update') {
+            document.getElementById("show").value = 'Edit'
+            document.getElementById("show").type = 'button'
+            document.getElementById("mobile").readOnly = true
+            document.getElementById("first").readOnly = true
+            document.getElementById("second").readOnly = true
+            document.getElementById("dob").readOnly = true
+            document.getElementById("email").readOnly = true
 
         }
     }
-        // $(document).ready(function() { 
-        //     $("#cancel").click(function() {
-        //         $("#show").html("Edit");                               
-        //     });            
-        // });
+    // $(document).ready(function() { 
+    //     $("#cancel").click(function() {
+    //         $("#show").html("Edit");
+    //     });
+    // });
 </script>
 
 {% endblock %}
- 
