@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="i1" value="rashi" readonly>
+    <input class="btn btn-success " id="show" value="Edit" type="button" onclick="return funA(this)" >&nbsp;&nbsp;
+           
+
+    <script>
+         function funA(button) {  
+            if(button.value=='Edit'){
+                document.getElementById("i1").readOnly=false
+                button.value='Update'
+                button.type='submit'
+                console.log(button.type)
+            }
+               
+
+       }
+    </script>
+</body>
+</html>
